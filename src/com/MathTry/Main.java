@@ -11,15 +11,33 @@ public class Main {
         System.out.println("Введите второе число");
         int y = sc.nextInt();
         int a = 0;
+        int k = 0;
         int b = 0;
         int c = 0;
+        int p = 0;
         for (int n = 1; n <= y; n++) {
             a += x;
         }
-        for (int z = 1; z<=y;z++){
-            b=x;
+        if (x >= y) {
+            k = Math.negateExact(y);
+            b = x+(k);
+            c = x;
+            for (int z = 0; c>0; z++) {
+                c += (k);
+                ++p;
+            }
+        } else {
+            k = Math.negateExact(x);
+            b = y+(k);
+            c = y;
+            for (int z = 0; c>0; z++){
+                c += (k);
+                ++p;
+            }
         }
-        System.out.println(b);
-        System.out.println(a);
+        System.out.println("Результат умножения: " + a);
+        System.out.println("Результат вычитания: " + b);
+        System.out.println("Результат деления: " + p);
     }
 }
+
