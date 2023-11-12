@@ -18,22 +18,25 @@ public class Main {
         for (int n = 1; n <= y; n++) {
             a += x;
         }
-        if (x >= y) {
-            k = Math.negateExact(y);
-            b = x+(k);
-            c = x;
-            for (int z = 0; c>0; z++) {
-                c += (k);
-                ++p;
+        if (x > y) {
+            for(int n = (y+1);n<=x;n++ ){
+             ++b;
             }
-        } else {
-            k = Math.negateExact(x);
-            b = y+(k);
-            c = y;
-            for (int z = 0; c>0; z++){
-                c += (k);
-                ++p;
+            for (int g = y;g<=x;g+=y){
+                p++;
             }
+        }
+        if(y > x) {
+            for (int n = (x+1);n<=y;n++){
+                ++b;
+            }
+            for (int g = x;g <= y;g += x){
+                p++;
+            }
+        }
+        if (x == y){
+            b = 0;
+            p = 1;
         }
         System.out.println("Результат умножения: " + a);
         System.out.println("Результат вычитания: " + b);
